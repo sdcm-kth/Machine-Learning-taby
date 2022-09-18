@@ -98,12 +98,6 @@ mean3 = np.mean(monk3_pruned, axis=1)
 std1 = np.std(monk1_pruned, axis=1)
 std3 = np.std(monk3_pruned, axis=1)
 
-MONK1_mean = np.around(mean1, decimals=4); MONK1_std  = np.around(std1, decimals=4)
-MONK3_mean = np.around(mean3, decimals=4); MONK3_std  = np.around(std3, decimals=4) 
-print("MONK-1 mean: {} \n STD: {} \n".format(MONK1_mean,MONK1_std))
-print("MONK-2 mean: {} \n STD: {}".format(MONK1_mean,MONK1_std))
-
-
 complete_tree1 = dt.buildTree(monks[0], m.attributes)
 complete_tree3 = dt.buildTree(monks[2], m.attributes)
 Error1 = [1 - dt.check(complete_tree1, monks_test[0]), np.amin(mean1)]
